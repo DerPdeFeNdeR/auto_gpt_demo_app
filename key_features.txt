@@ -1,0 +1,17 @@
+Key Features and Functionalities:
+
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Exponents
+6. Square roots
+7. Logarithms
+8. Trigonometric functions
+9. Graphing
+10. History of calculations
+11. Error handling
+12. User authentication
+13. User preferences
+14. Help and support
+15. About page
