@@ -8,8 +8,10 @@ app.controller('mathController', function($scope, $http, $httpParamSerializerJQL
         };
         var url = '/' + $scope.operation;
         $http.post(url, $httpParamSerializerJQLike(data), {headers: {'Content-Type': 'application/x-www-form-urlencoded'}}).then(function(response) {
+            console.log("Response received from server:", response);
             if ('result' in response.data) {
                 $scope.result = response.data.result;
+                console.log($scope.result);
                 $scope.error = '';
             } else {
                 $scope.error = response.data.error;
