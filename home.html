@@ -2,17 +2,17 @@
 <html>
 <head>
     <title>Mathematical Operations</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="static/js/app.js"></script>
 </head>
-<body ng-app="myApp">
-    <div class="container">
+<body ng-app="mathApp" ng-controller="mathController">
+     <div class="container">
         <h1>Mathematical Operations</h1>
-        <form ng-controller="addCtrl" ng-submit="submit()">
-            <div class="form-group">
+        <form ng-submit="submitForm()">
+           <div class="form-group">
                 <label for="num1">Number 1:</label>
                 <input type="number" class="form-control" id="num1" ng-model="num1" required>
             </div>
@@ -31,14 +31,13 @@
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-        <br>
         <div ng-show="result">
             <h3>Result:</h3>
-            <p>{{result}}</p>
+            <h4 ng-bind="result"></h4>
         </div>
         <div ng-show="error">
             <h3>Error:</h3>
-            <p>{{error}}</p>
+            <h4 ng-bind="error"></h4>
         </div>
     </div>
 </body>
